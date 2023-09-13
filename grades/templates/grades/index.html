@@ -1,0 +1,33 @@
+{% extends 'grades/base.html' %}
+{% load static %}
+{% block content %}
+    <div id="content">
+        <h2>Welcome to <span style="font-weight:bold; color:#b29b35;">Clean Blue</span> Template</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi quis ligula. Donec tortor purus, ornare vel,
+            tincidunt at, lacinia ac, leo. Nunc fermentum congue odio. Mauris cursus, pede vitae sagittis luctus, dolor
+            felis aliquam arcu, ac pulvinar lacus massa non ipsum. Praesent volutpat, felis in consectetuer lobortis,
+            nibh orci nonummy quam, nec lobortis tellus purus eget turpis. Vestibulum placerat sagittis lorem. Praesent
+            interdum ultricies massa. Morbi dolor.</p>
+        <p class="post"><a href="http://web-mastery.info/" class="readmore">Read more</a> <a
+                href="http://web-mastery.info/" class="comments">Comments (3)</a> <span
+                class="date">March 28, 2007</span></p>
+        <blockquote>This template has been tested in Mozilla Firefox and IE7. The page validates as XHTML 1.0
+            Transitional using valid CSS. It will work in browser widths of 800x600, 1024x768 &amp; 1280x1064. The
+            images used in this template are courtesy of <a href="http://codehaus.org/~bwalding/eclipse-icons/"
+                                                            title="Opensource Software Community">The Codehaus</a>.<br/>
+            For more FREE CSS templates visit <a href="http://www.mitchinson.net" title="Snapp Happy">my website</a>.
+        </blockquote>
+        <h2>Previous Article</h2>
+        <p><img class="imgleft" src="{% static '1.png' %}" alt=""/>Lorem ipsum dolor sit amet, consectetuer adipiscing
+            elit.
+            Morbi quis ligula. Donec tortor purus, ornare vel, tincidunt at, lacinia ac, leo. Nunc fermentum congue
+            odio. Mauris cursus, pede vitae sagittis luctus, dolor felis aliquam arcu, ac pulvinar lacus massa non
+            ipsum. Praesent volutpat, felis in consectetuer lobortis, nibh orci nonummy quam, nec lobortis tellus purus
+            eget turpis. Vestibulum placerat sagittis lorem. Praesent interdum ultricies massa. Morbi dolor. Nunc
+            fermentum congue odio. Mauris cursus, pede vitae sagittis luctus, dolor felis aliquam arcu, ac pulvinar
+            lacus massa non ipsum. </p>
+        <p class="post"><a href="http://web-mastery.info/" class="readmore">Read more</a> <a
+                href="http://web-mastery.info/" class="comments">Comments (3)</a> <span
+                class="date">March 28, 2007</span></p>
+    </div>
+{% endblock %}

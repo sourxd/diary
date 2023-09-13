@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{{ title }}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="container">
+    <div id="top">
+        <h1>School Diary</h1>
+    </div>
+    <div id="navcontainer">
+        <ul id="navlist">
+            <li id="active"><a href="{% url 'index' %}" id="current">Главная</a></li>
+            <li><a href="#">Item two</a></li>
+            <li><a href="#">Item three</a></li>
+            <li><a href="{% url 'users:login' %}">Вход</a></li>
+            <li><a href="{% url 'contacts' %}">Контакты</a></li>
+        </ul>
+    </div>
+    <div id="leftnav">
+        <h2>More Links</h2>
+        <ul id="leftnavmenu">
+            <li><a href="#">OTHER LINKS</a></li>
+            <li><a href="#">OTHER LINKS</a></li>
+            <li><a href="#">OTHER LINKS</a></li>
+            <li><a href="#">OTHER LINKS</a></li>
+            <li><a href="#">OTHER LINKS</a></li>
+            <li><a href="#">OTHER LINKS</a></li>
+        </ul>
+        <h2>Archives</h2>
+        <ul>
+            <li><a href="#">some links</a></li>
+            <li><a href="#">some links</a></li>
+            <li><a href="#">some links</a></li>
+            <li><a href="#">some links</a></li>
+            <li><a href="#">some links</a></li>
+        </ul>
+        <p class="quote">тоже можно добавить какой нибудь текст или поле</p>
+    </div>
+    {% block content %} {% endblock %}
+    <div id="footer">
+        <p> &copy; 2007 Anyone | Design by <a href="http://www.mitchinson.net"> www.mitchinson.net</a> | Licensed under a <a
+                    rel="license" target="_blank" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons
+                Attribution 3.0 License</a></p>
+    </div>
+</div>
+</body>
+</html>
