@@ -3,19 +3,16 @@
 {% block content %}
     <div id="content">
         <h2>Авторизация</h2>
+
         <form action="{% url 'users:login' %}" method="post">
             {% csrf_token %}
-            <div>
-                {{ form.username }}
-            </div>
-            <div>
-                {{ form.password }}
-            </div>
+            {{ form.username }}<br>
+            {{ form.password }}<br>
             <input type="submit" value="Вход"/>
         </form>
 
-        <blockquote>здесь любой текст по рекомендациям к авторизации</blockquote>
-        <h2>еще текст</h2>
-        <p>и еще текст</p>
+        <blockquote></blockquote>
+        <h2></h2>
+        <p><br><br><br></p>
     </div>
 {% endblock %}
