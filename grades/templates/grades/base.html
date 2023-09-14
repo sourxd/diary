@@ -16,10 +16,19 @@
     <div id="navcontainer">
         <ul id="navlist">
             <li id="active"><a href="{% url 'index' %}" id="current">Главная</a></li>
-            <li><a href="#">Item two</a></li>
-            <li><a href="#">Item three</a></li>
-            <li><a href="{% url 'users:login' %}">Вход</a></li>
+            <li><a href="#">OTHER</a></li>
+            <li><a href="#">OTHER</a></li>
             <li><a href="{% url 'contacts' %}">Контакты</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'users:profile' %}">Профиль</a></li>
+                <li><a href="{% url 'users:logout' %}">Выйти</a></li>
+                {% if user.is_superuser or user.is_staff %}
+                    <li><a href="{% url 'admin:index' %}">Админ панель</a></li>
+                {% endif %}
+            {% else %}
+                <li><a href="{% url 'users:registration' %}">Регистрация</a></li>
+                <li><a href="{% url 'users:login' %}">Вход</a></li>
+            {% endif %}
         </ul>
     </div>
     <div id="leftnav">
@@ -44,7 +53,8 @@
     </div>
     {% block content %} {% endblock %}
     <div id="footer">
-        <p> &copy; 2007 Anyone | Design by <a href="http://www.mitchinson.net"> www.mitchinson.net</a> | Licensed under a <a
+        <p> &copy; 2007 Anyone | Design by <a href="http://www.mitchinson.net"> www.mitchinson.net</a> | Licensed under
+            a <a
                     rel="license" target="_blank" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons
                 Attribution 3.0 License</a></p>
     </div>

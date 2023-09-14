@@ -3,7 +3,7 @@ margin : 0;
 padding : 0;
 } 
 body { 
-font : 80% "Trebuchet MS", Arial, Helvetica, Tahoma, sans-serif;
+font : 76% "Trebuchet MS", Arial, Helvetica, Tahoma, sans-serif;
 background : #f2f2f2 url(bg.gif) repeat-y top center;
 } 
 			/*WRAP*/ 
@@ -63,7 +63,7 @@ text-decoration : none;
 border-right : 1px solid #fff;
 } 
 #navcontainer ul li a:hover { 
-background : #369;
+background : #08457e;
 color : white;
 } 
 #navcontainer #active { 
@@ -144,11 +144,18 @@ font-size : 130%;
 letter-spacing : 5px;
 }
 blockquote {
-padding : 5px;
+padding : 7px;
 font-weight : bold;
 font-style : italic;
-color : #b29b35;
-} 
+color : #d10031;
+}
+
+blockquoteg {
+padding : 7px;
+font-weight : bold;
+font-style : italic;
+color : #006600;
+}
  
 .quote { 
 border-top : 1px solid #8fb8cc;
