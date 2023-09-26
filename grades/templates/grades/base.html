@@ -16,10 +16,10 @@
     <div id="navcontainer">
         <ul id="navlist">
             <li id="active"><a href="{% url 'index' %}" id="current">Главная</a></li>
-            <li><a href="#">OTHER</a></li>
-            <li><a href="#">OTHER</a></li>
             <li><a href="{% url 'contacts' %}">Контакты</a></li>
             {% if user.is_authenticated %}
+                <li><a href="{% url 'notes' %}">Список заметок</a></li>
+                <li><a href="{% url 'add_note' %}">Добавить заметку</a></li>
                 <li><a href="{% url 'users:profile' %}">Профиль</a></li>
                 <li><a href="{% url 'users:logout' %}">Выйти</a></li>
                 {% if user.is_superuser or user.is_staff %}
