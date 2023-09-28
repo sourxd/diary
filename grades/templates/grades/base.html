@@ -20,14 +20,14 @@
             {% if user.is_authenticated %}
                 <li><a href="{% url 'notes' %}">Список заметок</a></li>
                 <li><a href="{% url 'add_note' %}">Добавить заметку</a></li>
-                <li><a href="{% url 'users:profile' %}">Профиль</a></li>
-                <li><a href="{% url 'users:logout' %}">Выйти</a></li>
+                <li><a href="{% url 'profile' %}">Профиль</a></li>
+                <li><a href="{% url 'logout' %}">Выйти</a></li>
                 {% if user.is_superuser or user.is_staff %}
                     <li><a href="{% url 'admin:index' %}">Админ панель</a></li>
                 {% endif %}
             {% else %}
-                <li><a href="{% url 'users:registration' %}">Регистрация</a></li>
-                <li><a href="{% url 'users:login' %}">Вход</a></li>
+                <li><a href="{% url 'registration' %}">Регистрация</a></li>
+                <li><a href="{% url 'login' %}">Вход</a></li>
             {% endif %}
         </ul>
     </div>
