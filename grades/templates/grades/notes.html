@@ -5,7 +5,10 @@
         <h2>Список заметок</h2>
         {% if notes %}
             {% for item in notes %}
-                <p class="my-note">{{ item.text }}</p>
+                <p>{{ item.text }}</p>
+                <p class="post"><a href="{% url 'remove_note' item.id %}" class="readmore">Удалить запись</a>
+                    <span class="date">{{ item.created_at }}</span>
+                </p>
             {% endfor %}
         {% else %}
             <p class="my-note">нет заметок</p>

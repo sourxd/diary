@@ -38,3 +38,9 @@ def add_note(request):
         'title': 'Добавление заметки',
     }
     return render(request, 'grades/add_note.html', context)
+
+
+def remove_note(request, note_id):
+    note = Notes.objects.get(id=note_id, name=request.user)
+    note.delete()
+    return HttpResponseRedirect(reverse('notes'))
